@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Симулятор Равшана</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="menu" class="screen">
+      <div class="card menu-card">
+        <h1>СИМУЛЯТОР РАВШАНА</h1>
+        <p class="subtitle">Браузерная версия</p>
+        <button id="startBtn" class="primary">СТАТЬ РАВШАНОМ</button>
+        <button id="fartBtn">ПУКНУТЬ</button>
+        <button id="donateBtn" class="small">+</button>
+      </div>
+    </section>
+
+    <section id="game" class="screen hidden">
+      <div class="card game-card">
+        <header>
+          <div>
+            <h2>Вы: Равшан</h2>
+            <p>Задача: Собирать хлопок</p>
+          </div>
+          <div class="cotton"><span id="cotton">0</span> г хлопка</div>
+        </header>
+
+        <div class="stats">
+          <div>💰 Деньги: <b id="money">0</b>$</div>
+          <div>⚡ Энергия: <b id="energy">100</b></div>
+          <div>❤️ Здоровье: <b id="health">100</b></div>
+        </div>
+
+        <div class="actions">
+          <button id="collectBtn" class="primary">Собирать</button>
+          <button id="sellBtn">Продать</button>
+          <button id="shopBtn">Магазин</button>
+          <button id="restBtn">Отдохнуть</button>
+          <button id="giveUpBtn" class="danger">Сдаться</button>
+        </div>
+
+        <button id="backBtn" class="back">← В меню</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h3 id="modalTitle">Сообщение</h3>
+      <p id="modalText"></p>
+      <div id="modalActions" class="modal-actions"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
